@@ -1,0 +1,42 @@
+name: flutter_lecture_2024
+description: A new Flutter project.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # 状態管理
+  riverpod: ^2.3.7
+  flutter_riverpod: ^2.3.7
+
+  # HTTPクライアント
+  dio: ^5.6.0
+
+  # 環境変数
+  envied: ^0.3.0+3
+  
+  # Jsonシリアライズ/デシリアライズ
+  json_annotation: ^4.8.1
+
+  # 画像
+  cached_network_image: ^3.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+  # 自動コード生成
+  envied_generator: ^0.3.0+3
+  build_runner: ^2.3.3
+  json_serializable: ^6.6.2
+
+flutter:
+  uses-material-design: true
