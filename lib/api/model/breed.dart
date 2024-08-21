@@ -3,9 +3,13 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'breed.g.dart';
 
+/// 犬種
 @JsonSerializable(explicitToJson: true)
 class Breed {
+  /// 犬種ID
   final String id;
+
+  /// 犬種に関する情報
   final Attributes attributes;
 
   Breed({

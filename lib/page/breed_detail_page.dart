@@ -130,16 +130,16 @@ class _BreedDetailPageState extends ConsumerState<BreedDetailPage> {
                             ],
                           ),
                         ),
-                        Text.rich(
+                        const Text.rich(
                           TextSpan(
                             children: [
-                              const TextSpan(
+                              TextSpan(
                                 text: "犬種名: ",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              TextSpan(text: breed.attributes.name),
+                              TextSpan(text: 'TODO'),
                             ],
                           ),
                         ),
@@ -156,10 +156,10 @@ class _BreedDetailPageState extends ConsumerState<BreedDetailPage> {
                             ],
                           ),
                         ),
-                        Text.rich(
+                        const Text.rich(
                           TextSpan(
                             children: [
-                              const TextSpan(
+                              TextSpan(
                                 text: "寿命(目安): ",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
@@ -167,7 +167,7 @@ class _BreedDetailPageState extends ConsumerState<BreedDetailPage> {
                               ),
                               TextSpan(
                                 text:
-                                    "${breed.attributes.life.min} ~ ${breed.attributes.life.max}",
+                                    "TODO",
                               ),
                             ],
                           ),

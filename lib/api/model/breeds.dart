@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'breeds.g.dart';
 
+/// 犬種(複数)
 @JsonSerializable(explicitToJson: true)
 class Breeds {
   final List<Breed> data;

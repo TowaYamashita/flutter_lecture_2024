@@ -13,7 +13,7 @@ class LikeButton extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isLiked =
-        ref.watch(likedNotifierProvider.select((value) => value.contains(id)));
+        ref.read(likedNotifierProvider.select((value) => value.contains(id)));
 
     return IconButton(
       onPressed: () {

@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_lecture_2024/page/breed_detail_page.dart';
-import 'package:flutter_lecture_2024/page/breed_list_page.dart';
 import 'package:flutter_lecture_2024/page/menu_page.dart';
 
 Route buildRoutes(RouteSettings settings) {
   switch (settings.name) {
-    case BreedListPage.routeName:
-      return MaterialPageRoute(
-        builder: (context) {
-          return const BreedListPage();
-        },
-      );
     case BreedDetailPage.routeName:
       final args = settings.arguments as BreedDetailArgs;
       return MaterialPageRoute(
