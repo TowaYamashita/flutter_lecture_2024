@@ -1,0 +1,9 @@
+{
+  "configurations": [
+    {
+      "name": "アプリケーション起動(デバッグモード)",
+      "request": "launch",
+      "type": "dart"
+    }
+  ]
+}
