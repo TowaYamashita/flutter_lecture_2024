@@ -24,3 +24,6 @@ $ fvm use
 4. VSCodeで「flutter_lecture_2024」を開く
 
 5. F5を押して、アプリケーションを起動する
+
+# memo
+- このリポジトリを zapp.run で使うためにわざと古いバージョン(Flutter 3.7.3)を使っています
