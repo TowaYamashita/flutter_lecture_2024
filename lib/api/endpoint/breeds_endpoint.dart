@@ -15,7 +15,10 @@ class BreedsEndpoint {
 
   final Dio apiClient;
 
-  Future<Breeds> $get() async{
+  Future<Breeds> $get() async {
+    if (DateTime.now().second % 3 == 0) {
+      throw Exception('予期せぬエラー(約33%の確率で発生させているエラー)が発生しました。');
+    }
     final result = await apiClient.get('/breeds');
     return Breeds.fromJson(result.data);
   }

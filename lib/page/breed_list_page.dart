@@ -4,6 +4,7 @@ import 'package:flutter_lecture_2024/api/model/breeds.dart';
 import 'package:flutter_lecture_2024/page/breed_detail_page.dart';
 import 'package:flutter_lecture_2024/page/menu_page.dart';
 import 'package:flutter_lecture_2024/widget/credit_notation.dart';
+import 'package:flutter_lecture_2024/widget/error_dialog.dart';
 import 'package:flutter_lecture_2024/widget/like_button.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -23,6 +24,12 @@ class _BreedListPageState extends ConsumerState<BreedListPage> {
   void initState() {
     super.initState();
     _future = ref.read(breedsEndpointProvider).$get();
+  }
+
+  void reload() {
+    setState(() {
+      _future = ref.read(breedsEndpointProvider).$get();
+    });
   }
 
   @override
@@ -49,9 +56,22 @@ class _BreedListPageState extends ConsumerState<BreedListPage> {
           }
 
           if (snapshot.hasError) {
-            return Center(
-              child: Text("error: ${snapshot.error.toString()}"),
+            Future.microtask(
+              () {
+                showDialog(
+                  context: context,
+                  builder: (_) {
+                    return ErrorDialog(
+                      errorText: snapshot.error.toString(),
+                      resolve: () {
+                        reload();
+                      },
+                    );
+                  },
+                );
+              },
             );
+            return const SizedBox.shrink();
           }
 
           final breeds = snapshot.requireData.data;
