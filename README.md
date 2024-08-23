@@ -17,8 +17,9 @@ $ git clone https://github.com/TowaYamashita/flutter_lecture_2024.git
 3. 以下のコマンドを実行して、Flutterの特定のバージョンを落としてくる
 ```shell
 $ cd flutter_lecture_2024
-$ fvm install
-$ fvm use
+$ fvm install 3.7.3
+$ fvm use 3.7.3
+$ fvm flutter pub get
 ```
 
 4. VSCodeで「flutter_lecture_2024」を開く
